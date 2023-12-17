@@ -881,20 +881,37 @@ h2{
     .right-header{
         grid-row: 1;
         width: 90%;
-        margin: 0 0;
+        margin-left: -50px;
        .name{
         font-size: 1.2rem ;
        }   
     }
+    .right-header .info-con{
+        margin-left: 10px;
+        margin-right: -80px;
+    }
     .right-header .name  .type{
         font-size: 0.2rem ;
+        .name-deco1, .name-deco2, .name-deco3, .name-deco4, .name-deco5, 
+        .name-deco6, .name-deco7, .name-deco8, .name-deco9, .name-deco10, 
+        .name-deco11{
+            font-family: 'Roboto';
+            font-size: 4rem;
+            white-space: nowrap;
+        }
        } 
     .header-content .left-header .image .grayscale{
-        margin: 0 auto;
-        height: 130%;
-        width: 90%;
+        margin-left: -20px;
+        height: 450px;
+        width: 400px;
 
     }
+    .main-btn{
+        margin-left:50px;
+        margin-right: -30px;    
+    }
+    
+   
 }
 
 @media screen and (max-width: 600px){
@@ -931,7 +948,7 @@ h2{
             
         }
         .left-about{
-            padding-right: 3rem;
+            padding-right: 9rem;
             .paragraph-cont{
                 padding-left: 0;
             }
@@ -994,7 +1011,7 @@ h2{
      @media only screen and (max-width: 600px) {
 
         .contact-container1{
-           left: 50px;    
+           left: 20px;    
             text-align: justify;
             font-size: 1rem; 
             display: inline-block;
@@ -1003,7 +1020,7 @@ h2{
             white-space: normal;
             inline-size: 300px;
             overflow-wrap: break-word;
-            top: 130px;
+            top: 170px;
             }
      }
      @media only screen and (max-width: 600px) {
@@ -1014,7 +1031,7 @@ h2{
             
             font-size: 1rem; 
             display: inline-block;
-            margin-left: 10%; 
+            margin-left: -5%; 
             position: absolute;
             white-space: normal;
             inline-size: 300px;
@@ -1029,11 +1046,14 @@ h2{
                 display: inline-block;
                 position: relative;
                 top: 320px;
-                left: 80px;
+                left: 30px;
                }
             } 
 
             @media only screen and (max-width: 600px) {
+                .social-media ul{
+                    top: 40%;
+                }
                 .social-media ul li:nth-child(1) a{
                     background-color: #bd3062;
                     color: var(--color-common);
@@ -1051,6 +1071,28 @@ h2{
                     color: var(--color-common);
             }
             }
+
+            @media only screen and (max-width: 820px)  and (max-height: 1180px) {
+                .left-header{
+                    .h-shape{
+                    display: none;
+                }     
+                }
+
+                
+                
+                .right-contact{
+                    margin-left: 6rem;
+                }
+
+                .submit-btn{
+                    left: 37px;
+                }
+
+                
+
+                
+            }            
 
 /*@media only screen and (max-width: 700px) {
     .logo {
