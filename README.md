@@ -30,7 +30,7 @@ Contact Information: Easily accessible contact details for potential collaborati
 bash
 
 2. Copy code
-git clone https://github.com/dshetty3/DishaShetty.git
+git clone https://github.com/dshetty3/Disha-Shetty.git
 
 3. Open the project in your code editor.
 
