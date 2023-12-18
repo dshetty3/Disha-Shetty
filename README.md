@@ -47,7 +47,7 @@ Navigate through different sections to learn more about me and my projects.
 
 ## Deployment
 The Portfolio is deployed using GitHub Pages
-Please navigate the the following path: https://dshetty3.github.io/DishaShetty/
+Please navigate the the following path: https://dshetty3.github.io/Portfolio-Disha-Shetty/
 
 ## Snippet 
 
