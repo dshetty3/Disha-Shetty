@@ -31,12 +31,15 @@ function isItemInView(item){
   
 
     //const  = document.getElementById('toggleDark');
-    const btnTheme = document.querySelector('.theme-btn');
+     const btnTheme = document.querySelector('.theme-btn');
     let element = document.body;
-    btnTheme.addEventListener('click', function(){
-        
-        //document.getElementById('toggleDark').style.visibility = none;
+    btnTheme.addEventListener('click', function() {
         element.classList.toggle('light-mode');
-       
-    })
+        var imageElement = document.getElementById('dlogo');
+            if (imageElement.src.toLowerCase().endsWith('logo.jpeg')) {
+            imageElement.src = 'img/logo1.jpeg';
+        } else {
+            imageElement.src = 'img/logo.jpeg';
+        }
+    });
    
