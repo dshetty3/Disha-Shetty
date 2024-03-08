@@ -100,12 +100,8 @@ section{
   
 }
 @keyframes scaleAnim{
-    0%{
-        transform: translateY(-100%) scaleX(0);  
-    }
-    100%{
-        transform: translateY(0) scaleX(1); 
-    }
+    0%{transform:translateY(100%); opacity: 0;}
+    100%{transform:translateY(0px, 0); opacity: 1;}   
 }
 
 .fadeInUp{
