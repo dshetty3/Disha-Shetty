@@ -1,23 +1,3 @@
-const sections = document.querySelectorAll('.section');
-const sectBtns = document.querySelectorAll('.controlls');
-const sectBtn = document.querySelectorAll('.control');
-const allSections = document.querySelector('.main-content');
-
-
-(function () {
-    [...document.querySelectorAll(".control")].forEach(button => {
-        button.addEventListener("click", function() {
-            document.querySelector(".active-btn").classList.remove("active-btn");
-            this.classList.add("active-btn");
-            document.querySelector(".active").classList.remove("active");
-            document.getElementById(button.dataset.id).classList.add("active");
-        })
-    });
-    
-})();
-    
-
-
 
 function isItemInView(item){
     var rect = item.getBoundingClientRect();
@@ -30,7 +10,6 @@ function isItemInView(item){
   }
   
 
-    //const  = document.getElementById('toggleDark');
      const btnTheme = document.querySelector('.theme-btn');
     let element = document.body;
     btnTheme.addEventListener('click', function() {
@@ -44,7 +23,7 @@ function isItemInView(item){
     });
 
 
-    // Splash Screen
+// Splash Screen
 let intro = document.querySelector('.intro');
 let logo = document.querySelector('.logo-header');
 let logoSpan = document.querySelectorAll('.logo');
@@ -63,7 +42,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
                 setTimeout(()=>{
                     span.classList.remove('active');
                     span.classList.add('fade');
-                },(idx + 1) * 50)
+                },(idx + 1) * 700)
             })
         }, 2000)
 
@@ -73,7 +52,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
     })
 
     //Hello Change
-    const languages = ["Hello.", "مرحبا.", "नमस्ते.", "你好.", "Holá."];
+    const languages = ["Hello.", "مرحبا.", "नमस्ते.", "你好.", "Holá.", "привет."];
 
         let currentIndex = 0;
 
@@ -85,8 +64,87 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
         setInterval(rotateText, 400);
 
-        
 })
+
+
+document.querySelector(".sidebar .toggle-btn").addEventListener("click", function(){
+    document.querySelector(".sidebar").classList.toggle("active");
+})
+
+function scrollToSection(event, sectionId) {
+    event.preventDefault(); 
+    const section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll(".fade-in-up");
+  
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+  
+    elements.forEach(el => {
+      observer.observe(el);
+    });
+  });
+
+const blogCards = document.querySelectorAll('.blog-card');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, {
+  threshold: 0.1 
+});
+
+blogCards.forEach(card => {
+  observer.observe(card);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const timelineItems = document.querySelectorAll('.timeline li');
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+  
+    timelineItems.forEach(item => {
+      observer.observe(item);
+    });
+  });
+  
+
+
+document.addEventListener('mousemove', (e) => {
+    const circle = document.querySelector('.cursor');
+    circle.style.left = `${e.clientX}px`;
+    circle.style.top = `${e.clientY}px`;
+});
+
+
+
+
+
+
+
+  
+
+
+  
 
 
 
