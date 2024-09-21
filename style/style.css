@@ -1247,11 +1247,12 @@ h2{
                 .left-about{
                     right:90px;
                     .fadeInUp .row{
-                        margin-left: -155px;
+                        margin-left: -80px;
+                        display: inline-grid;
                     }        
                 }
                 .right-about #about-photo{
-                    margin: 600px 40px;
+                    margin: 400px -100px;
                 }   
             }
            
